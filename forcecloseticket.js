@@ -100,7 +100,7 @@
     {
       "storage": "1",
       "varName": "error",
-      "message": "${globalVars(\"sDisagree\")} You are not authorized!\nLacking role: `Management Team`\n\nIf you think this is an error, contact an owner.",
+      "message": ":x: You are not authorized!\nLacking role: `Management Team`\n\nIf you think this is an error, contact an owner.",
       "name": "Set Embed Description"
     },
     {
