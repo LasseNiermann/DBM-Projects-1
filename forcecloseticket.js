@@ -1,8 +1,8 @@
 {
-  "name": "forcecloseticket",
+  "name": "forceclose",
   "permissions": "NONE",
   "restriction": "1",
-  "_id": "neOUc",
+  "_id": "vaDgD",
   "actions": [
     {
       "channel": "0",
@@ -18,7 +18,7 @@
       "comparison": "5",
       "value": "'ticket-'",
       "iftrue": "3",
-      "iftrueVal": "5",
+      "iftrueVal": "4",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
@@ -33,25 +33,18 @@
       "imageUrl": "",
       "thumbUrl": "",
       "storage": "1",
-      "varName": "erroré",
+      "varName": "error1",
       "name": "Create Embed Message"
     },
     {
       "storage": "1",
-      "varName": "erroré",
+      "varName": "error1",
       "message": ":x: You are not in a ticket channel.",
       "name": "Set Embed Description"
     },
     {
       "storage": "1",
-      "varName": "erroré",
-      "message": "Shiba | Management Bot",
-      "footerIcon": "",
-      "name": "Set Embed Footer"
-    },
-    {
-      "storage": "1",
-      "varName": "erroré",
+      "varName": "error1",
       "channel": "0",
       "varName2": "",
       "name": "Send Embed Message"
@@ -107,15 +100,8 @@
     {
       "storage": "1",
       "varName": "error",
-      "message": ":x: You are not authorized!\nLacking role: `Management Team`\n\nIf you think this is an error, contact an owner.",
+      "message": "${globalVars(\"sDisagree\")} You are not authorized!\nLacking role: `Management Team`\n\nIf you think this is an error, contact an owner.",
       "name": "Set Embed Description"
-    },
-    {
-      "storage": "1",
-      "varName": "error",
-      "message": "Shiba | Management Bot",
-      "footerIcon": "",
-      "name": "Set Embed Footer"
     },
     {
       "storage": "1",
@@ -138,7 +124,7 @@
       "name": "Delete Role"
     },
     {
-      "title": "Forceclosed Ticket",
+      "title": "Ticket Forceclosed",
       "author": "",
       "color": "#36393F",
       "timestamp": "true",
@@ -176,6 +162,6 @@
     }
   ],
   "_aliases": [
-    "forceclose"
+    "forcecloseticket"
   ]
 }
