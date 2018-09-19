@@ -1,5 +1,5 @@
 {
-  "name": "discord.gg/|discordapp.com/",
+  "name": "discord.gg/|discordapp.com/invite",
   "permissions": "NONE",
   "restriction": "1",
   "_id": "ecPYk",
