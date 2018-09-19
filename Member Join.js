@@ -5,6 +5,32 @@
   "_id": "WFmNF",
   "actions": [
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "mj_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mj_sys",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "log_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "logcount",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "log_system",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
       "member": "2",
       "varName": "member",
       "info": "1",
@@ -78,6 +104,23 @@
       "channel": "6",
       "varName2": "mlchannel",
       "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "mj_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mj_sys",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "log_system",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
     }
   ]
 }

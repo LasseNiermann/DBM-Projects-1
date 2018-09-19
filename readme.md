@@ -2,6 +2,18 @@
 This is a highly requested logging system that is going to be updated more. This logs role updates, channel updates seperating voice and text, and works with dozens of options.
 You can expect a toggle system coming soon. Other than that, enjoy.
 
+
+# Updates
+ ### 1.1
+ What's been added:
+ - Every event now counts how much times its been initiated by a member.
+ - Added message edits & deleted messages.
+ - Command that shows total & every log count thats been initiated. [Example](http://prntscr.com/kwadrz)
+ 
+ What's coming:
+ - Command for each member that shows them how many times they've done each action. (Staff Members)
+ - Let me know what you want
+
 # Notes
 
 1. This requires [DBM Mods](https://github.com/Discord-Bot-Maker-Mods/DBM-Mods/tree/master), and [DBM Beta](https://discordapp.com/channels/374961173524643843/375701228111527937/461267260234006531)

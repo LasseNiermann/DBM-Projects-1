@@ -5,6 +5,32 @@
   "_id": "LVnFA",
   "actions": [
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "cd_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "cd_sys",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "log_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "logcount",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "log_system",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
       "channel": "3",
       "varName": "channeldeleted",
       "info": "2",
@@ -82,6 +108,23 @@
       "channel": "6",
       "varName2": "mlchannel",
       "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "cd_system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "cd_sys",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "cd_system",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
     }
   ]
 }
