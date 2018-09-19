@@ -150,7 +150,7 @@
       "name": "Control Variable"
     },
     {
-      "call": "19",
+      "call": "20",
       "name": "Jump to Action"
     },
     {
@@ -169,10 +169,17 @@
       "name": "Add Embed Field"
     },
     {
+      "info": "1",
+      "find": "test",
+      "storage": "1",
+      "varName": "chn",
+      "name": "Find Channel"
+    },
+    {
       "storage": "1",
       "varName": "embed",
-      "channel": "6",
-      "varName2": "mlchannel",
+      "channel": "5",
+      "varName2": "chn",
       "name": "Send Embed Message"
     },
     {
