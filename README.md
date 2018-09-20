@@ -1,10 +1,12 @@
-# Discord Bot Maker | Projects
+# Release
+This report system will allow all users to report someone (other than themselves) once every 5 minutes (customizable).
+Both report points expires after 10 minutes. A user can not be reported more than 2 times every 10 minutes.
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
+The system will not work if;
+- The channel hasnt been set
+- The user is reporting himself
+- A valid link wasnt provided.
+- The command was not used properly.
 
-## Raw Data Projects
-
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
-
-[Other](https://discord.gg/T7843N) 
+Correct format:
+[p]report @User (https://link.here) (reason 2+ words)
