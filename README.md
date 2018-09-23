@@ -2,6 +2,9 @@
 # XP System
 This is an XP system  that has a leaderboard and uses SQL to run.
 
+### Made by Totally not Two#2131 and Dog#5567
+(SQL System by TNT - XP System by Dog)
+
 ## Requirements
 DBM Beta & (beta) mods
 MySQL
