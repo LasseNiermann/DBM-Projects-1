@@ -5,6 +5,27 @@
   "_id": "ChohJ",
   "actions": [
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "isenabled11",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "isenabled",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "isenabled11",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
       "time": "7",
       "measurement": "1",
       "name": "Wait"

@@ -5,6 +5,27 @@
   "_id": "VDYKZ",
   "actions": [
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "isenabled12",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "isenabled",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "isenabled12",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
       "role": "3",
       "varName": "roledeleted",
       "info": "2",

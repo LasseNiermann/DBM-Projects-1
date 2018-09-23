@@ -4,6 +4,18 @@ You can expect a toggle system coming soon. Other than that, enjoy.
 
 
 # Updates
+
+ ### 1.2
+ What's been added:
+ - Added an option to toggle any of the 12 logs, or all at once.
+ - Combined the `logsystem` command to show both countings & toggled options
+ - Fixed some small bugs in some commands.
+ - Whopping 554 actions.
+ 
+ What's coming:
+ - Command for each member that shows them how many times they've done each action. (Staff Members)
+ - The future.
+
  ### 1.1
  What's been added:
  - Every event now counts how much times its been initiated by a member.
