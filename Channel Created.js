@@ -7,6 +7,27 @@
     {
       "server": "0",
       "varName": "",
+      "dataName": "isenabled4",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "isenabled",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "isenabled4",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
       "dataName": "cc_system",
       "defaultVal": "0",
       "storage": "1",
