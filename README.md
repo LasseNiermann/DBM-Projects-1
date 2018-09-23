@@ -6,9 +6,9 @@ This is an XP system  that has a leaderboard and uses SQL to run.
 (SQL System by TNT - XP System by Dog)
 
 ## Requirements
-DBM Beta & (beta) mods
-MySQL
-a brain
+- DBM Beta & (beta) mods
+- MySQL
+- a brain
 
 ## How to download MySQL
 Go to [this link](https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.23.0.msi) and run the installer.
