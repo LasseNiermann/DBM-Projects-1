@@ -194,7 +194,7 @@
     },
     {
       "storage": "1",
-      "varName": "everyone_ping",
+      "varName": "everyone_pingafter",
       "comparison": "0",
       "value": "",
       "iftrue": "3",
