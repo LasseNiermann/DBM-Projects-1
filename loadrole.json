@@ -1,6 +1,6 @@
 {
   "name": "loadrole",
-  "permissions": "NONE",
+  "permissions": "ADMINISTRATOR",
   "restriction": "1",
   "_id": "zWPZm",
   "actions": [
