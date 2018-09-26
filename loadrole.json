@@ -1,0 +1,357 @@
+{
+  "name": "loadrole",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zWPZm",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "param",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put a file name.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rolecount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "rolec",
+      "name": "Store Server Data"
+    },
+    {
+      "filename": "./resources/roles/${tempVars(\"param\")}.json",
+      "storage": "1",
+      "varName2": "file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "file",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: File doesnt exist.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.color",
+      "storage": "1",
+      "varName": "color",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.seperate",
+      "storage": "1",
+      "varName": "sep_results",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.mentionable",
+      "storage": "1",
+      "varName": "me_result",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"me_result\")}",
+      "storage": "1",
+      "varName2": "m_result2",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"sep_results\")}",
+      "storage": "1",
+      "varName2": "sep_result2",
+      "name": "Send Message"
+    },
+    {
+      "message": "1",
+      "varName": "m_result2",
+      "info": "2",
+      "storage": "1",
+      "varName2": "m_result",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "sep_result2",
+      "info": "2",
+      "storage": "1",
+      "varName2": "sep_result",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result",
+      "comparison": "5",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "6",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result",
+      "comparison": "5",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "roleName": "${tempVars(\"name\")}",
+      "hoist": "true",
+      "mentionable": "true",
+      "color": "${tempVars(\"color\")}",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Loaded the role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result2",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result2",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result",
+      "comparison": "5",
+      "value": "false",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "6",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result",
+      "comparison": "5",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "roleName": "${tempVars(\"name\")}",
+      "hoist": "true",
+      "mentionable": "true",
+      "color": "${tempVars(\"color\")}",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Loaded the role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result2",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result2",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result",
+      "comparison": "5",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "6",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result",
+      "comparison": "5",
+      "value": "false",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "roleName": "${tempVars(\"name\")}",
+      "hoist": "false",
+      "mentionable": "true",
+      "color": "${tempVars(\"color\")}",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Loaded the role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result2",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result2",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result",
+      "comparison": "5",
+      "value": "false",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "6",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result",
+      "comparison": "5",
+      "value": "false",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "roleName": "${tempVars(\"name\")}",
+      "hoist": "false",
+      "mentionable": "false",
+      "color": "${tempVars(\"color\")}",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Loaded the role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "m_result2",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "sep_result2",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Your file is corrupt",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

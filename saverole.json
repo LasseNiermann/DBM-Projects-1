@@ -1,0 +1,147 @@
+{
+  "name": "saverole",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "TRQWd",
+  "actions": [
+    {
+      "info": "3",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "role",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "3",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Mention a role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "role",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Mention a role that exists.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "rolename",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "rolecolor",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "mentionable",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "seperate",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "member_amount",
+      "name": "Store Role Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rolecount",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rolecount",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "rolec",
+      "name": "Store Server Data"
+    },
+    {
+      "input": "{\n\"name\": \"rolename\",\n\"color\": \"rolecolor\",\n\"mentionable\": \"mentionable\",\n\"seperate\":  \"seperate\",\n\"member_count\": \"member_amount\"\n}",
+      "format": ".json",
+      "filename": "role${tempVars(\"rolec\")}",
+      "filepath": "./resources/roles",
+      "filetask": "0",
+      "name": "File Control"
+    },
+    {
+      "input": "{\\n\n\"name\": \"${tempVars(\"rolename\")}\",\\n\n\"color\": \"${tempVars(\"rolecolor\")}\",\\n\n\"mentionable\": \"${tempVars(\"mentionable\")}\",\\n\n\"seperate\": \"${tempVars(\"seperate\")}\",\\n\n\"member_count\": \"${tempVars(\"member_amount\")}\"\\n\n}\\n",
+      "format": ".json",
+      "filename": "role${tempVars(\"rolec\")}",
+      "filepath": "./resources/roles",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Saved the role.\nLoad it again using `loadrole role${tempVars(\"rolec\")}`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Saved the role.\nCheck your dms for the saved name.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
