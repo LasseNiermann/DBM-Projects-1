@@ -1,6 +1,6 @@
 {
   "name": "saverole",
-  "permissions": "NONE",
+  "permissions": "ADMINISTRATOR",
   "restriction": "1",
   "_id": "TRQWd",
   "actions": [
