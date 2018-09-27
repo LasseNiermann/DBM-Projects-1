@@ -1,10 +1,21 @@
-# Discord Bot Maker | Projects
+# Token Feature
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
+This is a token feature which allows you to have premium commands for servers.
 
-## Raw Data Projects
+### How to use/install
+1. Get all the inside json code and put it all as commands except **Premium Format.json**
+2. Copy the insides of "premium format" and place it before any command you want to be premium.
+3. Done!
 
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
+### How it works
+It works using tokens. Only you (set your id in the commands) can create tokens. Everytime a token is redeemed, it'll be deleted, and a new file with the information about the server will be made.
 
-[Other](https://discord.gg/T7843N) 
+### Features
+- Create token (you only)
+- Redeem token
+- Set server status
+
+### Versions
+
+0.1
+-  Initial release
