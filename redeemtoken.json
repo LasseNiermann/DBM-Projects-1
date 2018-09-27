@@ -1,0 +1,186 @@
+
+{
+  "name": "redeemtoken",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "SEbsB",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "token",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "token",
+      "comparison": "2",
+      "value": "16",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable MOD"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: This is not a valid token.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "filename": "./resources/premium_feature/${tempVars(\"token\")}.json",
+      "storage": "1",
+      "varName2": "file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "file",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: This token doesnt seem to exist.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "is_premium",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ispremium",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "is_premium",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Your server is already marked as premium.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "input": "",
+      "format": ".json",
+      "filename": "${tempVars(\"token\")}",
+      "filepath": "./resources/premium_feature",
+      "filetask": "3",
+      "name": "File Control"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Succesfully redeemed your token.\nYour server is now premium!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "is_premium",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "Name",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "11",
+      "storage": "1",
+      "varName2": "Owner",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "members",
+      "name": "Store Server Things"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "maxUses": "",
+      "lifetime": "",
+      "tempInvite": "false",
+      "unique": "true",
+      "storage": "1",
+      "varName2": "inv",
+      "name": "Create Invite"
+    },
+    {
+      "input": "",
+      "format": ".json",
+      "filename": "${tempVars(\"Name\")}",
+      "filepath": "./resources/premium_feature/servers/",
+      "filetask": "0",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\":\"${tempVars(\"Name\")}\",\n\"id\":\"${tempVars(\"ID\")}\",\n\"owner\":\"${tempVars(\"Owner\")}\",\n\"members\":\"${tempVars(\"members\")}\",\n\"invite\":\"${tempVars(\"inv\")}\"\n}",
+      "format": ".json",
+      "filename": "${tempVars(\"Name\")}",
+      "filepath": "./resources/premium_feature/servers/",
+      "filetask": "1",
+      "name": "File Control"
+    }
+  ]
+}

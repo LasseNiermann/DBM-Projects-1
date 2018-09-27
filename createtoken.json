@@ -1,0 +1,82 @@
+{
+  "name": "createtoken",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zbIJu",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "336516974307966978",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "EDIT THE ID!! ^^",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: No.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "input": "A0",
+      "wordLength": "16",
+      "storage": "1",
+      "varName": "result",
+      "name": "Randomize Letters"
+    },
+    {
+      "input": "",
+      "format": ".json",
+      "filename": "${tempVars(\"result\")}",
+      "filepath": "./resources/premium_feature/",
+      "filetask": "0",
+      "name": "File Control"
+    },
+    {
+      "input": "{\"token:true\"}",
+      "format": ".json",
+      "filename": "${tempVars(\"result\")}",
+      "filepath": "./resources/premium_feature/",
+      "filetask": "2",
+      "name": "File Control"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Succesfully made a new premium token. I have messaged you it.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Here is the token. You can also find it as a file in the ./resources/premium_feature folder. ${tempVars(\"result\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

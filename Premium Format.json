@@ -1,0 +1,40 @@
+{
+  "name": "PremiumFormat",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "eTeoH",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "is_premium",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ispremium",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "is_premium",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: This server is not marked as a premium server.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
