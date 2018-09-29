@@ -103,6 +103,30 @@
       "name": "Control Server Data"
     },
     {
+      "storage": "1",
+      "varName": "number",
+      "min": "1",
+      "max": "99999999",
+      "name": "Generate Random Number"
+    },
+    {
+      "filename": "./resources/roles/role${tempVars(\"number\")}",
+      "storage": "1",
+      "varName2": "exists",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "exists",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
       "server": "0",
       "varName": "",
       "dataName": "rolecount",
@@ -114,7 +138,7 @@
     {
       "input": "{\n\"name\": \"rolename\",\n\"color\": \"rolecolor\",\n\"mentionable\": \"mentionable\",\n\"seperate\":  \"seperate\",\n\"member_count\": \"member_amount\"\n}",
       "format": ".json",
-      "filename": "role${tempVars(\"rolec\")}",
+      "filename": "role${tempVars(\"number\")}",
       "filepath": "./resources/roles",
       "filetask": "0",
       "name": "File Control"
@@ -122,7 +146,7 @@
     {
       "input": "{\\n\n\"name\": \"${tempVars(\"rolename\")}\",\\n\n\"color\": \"${tempVars(\"rolecolor\")}\",\\n\n\"mentionable\": \"${tempVars(\"mentionable\")}\",\\n\n\"seperate\": \"${tempVars(\"seperate\")}\",\\n\n\"member_count\": \"${tempVars(\"member_amount\")}\"\\n\n}\\n",
       "format": ".json",
-      "filename": "role${tempVars(\"rolec\")}",
+      "filename": "role${tempVars(\"number\")}",
       "filepath": "./resources/roles",
       "filetask": "1",
       "name": "File Control"

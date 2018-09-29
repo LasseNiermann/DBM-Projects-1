@@ -1,0 +1,112 @@
+{
+  "name": "loadchannel",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "hUKEz",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "param",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put a file name.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "filename": "./resources/channels/${tempVars(\"param\")}.json",
+      "storage": "1",
+      "varName2": "file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "file",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: File doesnt exist.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.channelName",
+      "storage": "1",
+      "varName": "name",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.channelTopic",
+      "storage": "1",
+      "varName": "topic",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.channelLM",
+      "storage": "1",
+      "varName": "LM",
+      "name": "Parse From Stored Json (Temp Fix)"
+    },
+    {
+      "channelName": "${tempVars(\"name\")}",
+      "topic": "${tempVars(\"topic\")}",
+      "position": "",
+      "storage": "1",
+      "varName": "channelcr",
+      "name": "Create Text Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "channelcr",
+      "message": "Channel loaded by ${member}\n\nThe channel code has been deleted, you have to back this up again if needed!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "input": "",
+      "format": ".json",
+      "filename": "${tempVars(\"param\")}",
+      "filepath": "./resources/channels",
+      "filetask": "3",
+      "name": "File Control"
+    }
+  ]
+}
