@@ -1,10 +1,26 @@
-# Discord Bot Maker | Projects
+# Point System 
+This is a VERY advanced point system which noone should edit unless they have patience & know what theyre doing.
+Below is info on some commands as it might be confusing.
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
+## Information
 
-## Raw Data Projects
+### [p]points command
+You can use the points command in 5 different ways.
+[p]points - view your points
+[p]points @user - view a users points
+Admin commands
+[p]points @user add (amount) - add points to a user
+[p]points @user remove (amount) - remove points from a user
+[p]points @user set (amount) - set users' points
 
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
-
-[Other](https://discord.gg/T7843N) 
+### [p]pconfigure command
+There's a lot of configuration options.
+Everything has been automatically set to a default except the channel drops are sent in.
+Information about each option:
+`ppm` Points Per Message
+`on` Turn gaining points on
+`off` Turn gaining points off
+`ppd` Points per drop
+`dpt` Drop per time (minutes)
+`channel` Set the drop channel REQUIRED
+`view` View the configuration
