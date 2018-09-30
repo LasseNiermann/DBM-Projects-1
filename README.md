@@ -24,3 +24,6 @@ Information about each option:
 `dpt` Drop per time (minutes)  
 `channel` Set the drop channel REQUIRED  
 `view` View the configuration  
+
+### Pickup system
+The pickup system works by the configuration. Every (15) minutes a truck will arrive and people can do [p]pickup to rob it for (100) points. Don't tamper with the cmds itself.
