@@ -1,0 +1,548 @@
+{
+  "name": "pconfigure",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "geZOx",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x You must be an administrator to run this command.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "type",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppd",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "ppd",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "dpt",
+      "defaultVal": "5",
+      "storage": "1",
+      "varName2": "dpt",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppm",
+      "defaultVal": "2",
+      "storage": "1",
+      "varName2": "ppm",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"view\"",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"ppm\"",
+      "iftrue": "2",
+      "iftrueVal": "32",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"on\"",
+      "iftrue": "2",
+      "iftrueVal": "41",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"off\"",
+      "iftrue": "2",
+      "iftrueVal": "46",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"ppd\"",
+      "iftrue": "2",
+      "iftrueVal": "52",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"dpt\"",
+      "iftrue": "2",
+      "iftrueVal": "61",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"channel\"",
+      "iftrue": "2",
+      "iftrueVal": "69",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: I did not understand your configuration type.\nPlease use one of the following:\n`ppm` Points Per Message\n`on` Turn gaining points on\n`off` Turn gaining points off\n`ppd` Points per drop\n`dpt` Drop per time (minutes)\n`channel` Set the drop channel\n`view` View the configuration",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppd",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "ppd",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "dpt",
+      "defaultVal": "5",
+      "storage": "1",
+      "varName2": "dpt",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppm",
+      "defaultVal": "2",
+      "storage": "1",
+      "varName2": "ppm",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avat",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"tag\")}",
+      "color": "RED",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"avat\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "view",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "comparison": "1",
+      "value": "\"undefined\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "1",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "changeType": "0",
+      "value": "\"on\"",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "view",
+      "message": "Gaining points per message is currently toggled `${serverVars(\"status\")}`\nDrops are sent in ${serverVars(\"mchannel\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "view",
+      "fieldName": "Points Per Message",
+      "message": "`${tempVars(\"ppm\")}`",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "view",
+      "fieldName": "Points Per Drop",
+      "message": "`${tempVars(\"ppd\")}`",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "view",
+      "fieldName": "Drop Per Time",
+      "message": "`${tempVars(\"dpt\")}`",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "view",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "PPM",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "ppm-amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put in a number",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppm",
+      "changeType": "0",
+      "value": "tempVars(\"ppm-amount\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Changed the PPM to ${tempVars(\"ppm-amount\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "ON/OFF",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "changeType": "0",
+      "value": "\"on\"",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Changed the status to `on`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "changeType": "0",
+      "value": "\"off\"",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Changed the status to `off`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "PPD",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "ppd-amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put in a number",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppd",
+      "changeType": "0",
+      "value": "tempVars(\"ppd-amount\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Changed the PPD to ${tempVars(\"ppd-amount\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "DPT",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "dpt-amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put in a number",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "dpt",
+      "changeType": "0",
+      "value": "tempVars(\"dpt-amount\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Changed the DPT to ${tempVars(\"dpt-amount\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "2",
+      "varName": "achannel",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "${serverVars(\"achannel\")}",
+      "storage": "2",
+      "varName": "mchannel",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "mchannel",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Put a valid channel (no #)",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "mchannel",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Drops will now be placed in ${serverVars(\"mchannel\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "17",
+      "name": "Jump to Action"
+    }
+  ],
+  "comType": "0"
+}

@@ -1,0 +1,351 @@
+{
+  "name": "points",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "vAJEE",
+  "actions": [
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "points",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "addremoveset",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "authpoints",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "authtag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "authavatar",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"authtag\")}",
+      "color": "RED",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"authavatar\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "Points",
+      "message": "${tempVars(\"authpoints\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "addremoveset",
+      "comparison": "1",
+      "value": "\"add\"",
+      "iftrue": "2",
+      "iftrueVal": "24",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "addremoveset",
+      "comparison": "1",
+      "value": "\"remove\"",
+      "iftrue": "2",
+      "iftrueVal": "31",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "addremoveset",
+      "comparison": "1",
+      "value": "\"set\"",
+      "iftrue": "2",
+      "iftrueVal": "39",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mpoints",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "mtag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "authtag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "mavatar",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"mtag\")}",
+      "color": "RED",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"mavatar\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Points",
+      "message": "${tempVars(\"mpoints\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "message": "Requested by ${tempVars(\"authtag\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x You must be an administrator to run this command.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "changeType": "1",
+      "value": "+tempVars(\"amount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mpoints",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Added `${tempVars(\"amount\")}` points to ${mentionedUser}\nTotal points now: ${tempVars(\"mpoints\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x You must be an administrator to run this command.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mpoints",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "changeType": "0",
+      "value": "tempVars(\"mpoints\") - tempVars(\"amount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mpoints",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Removed `${tempVars(\"amount\")}` points from ${mentionedUser}\nTotal points now: ${tempVars(\"mpoints\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x You must be an administrator to run this command.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "points",
+      "changeType": "0",
+      "value": "tempVars(\"amount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Set ${mentionedUser}'s points to `${tempVars(\"amount\")}`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "0"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "points-per-message",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hKUOY",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppm",
+      "defaultVal": "2",
+      "storage": "1",
+      "varName2": "ppm",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "status",
+      "comparison": "1",
+      "value": "\"on\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "points",
+      "defaultVal": "25",
+      "storage": "1",
+      "varName2": "points",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "points",
+      "changeType": "1",
+      "value": "+tempVars(\"ppm\")",
+      "name": "Control Member Data"
+    }
+  ],
+  "comType": "3"
+}

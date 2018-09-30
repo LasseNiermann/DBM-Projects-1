@@ -1,0 +1,75 @@
+
+{
+  "name": "pickup",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "QCeXH",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "pickup_enabled",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "pickup_enabled",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "pickup_enabled",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: There aint no pickup truck.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ppd",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "ppd",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "points",
+      "changeType": "1",
+      "value": "+tempVars(\"ppd\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} has robbed the pickup truck!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "pickup_enabled",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    }
+  ],
+  "comType": "0"
+}
