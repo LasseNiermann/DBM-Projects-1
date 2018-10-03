@@ -190,17 +190,12 @@
       "name": "Add Embed Field"
     },
     {
-      "info": "1",
-      "find": "test",
-      "storage": "1",
-      "varName": "chn",
-      "name": "Find Channel"
-    },
-    {
       "storage": "1",
       "varName": "embed",
-      "channel": "5",
-      "varName2": "chn",
+      "channel": "6",
+      "varName2": "mlchannel",
+      "storage3": "0",
+      "varName3": "",
       "name": "Send Embed Message"
     },
     {
