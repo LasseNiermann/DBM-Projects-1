@@ -1,10 +1,9 @@
-# Discord Bot Maker | Projects
+# Fight 0.1
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
+"Simple" fight system.
+[p]fight @user - request to fight
+[p]punch @user - punch a user you're fighting (5s cooldown)
+[p]bite @user - bite a user you're fighting (more damage, double the cooldown)
 
-## Raw Data Projects
-
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
-
-[Other](https://discord.gg/T7843N) 
+Critical chance on punch: 20%
+Critical chance on bite: 1/7
