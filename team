@@ -1,0 +1,170 @@
+{
+  "name": "team",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "WNqiF",
+  "actions": [
+    {
+      "filename": "./staff/1.txt",
+      "storage": "1",
+      "varName2": "teamone",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/1.json",
+      "storage": "1",
+      "varName2": "teamonejson",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/2.txt",
+      "storage": "1",
+      "varName2": "teamtwo",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/2.json",
+      "storage": "1",
+      "varName2": "teamtwojson",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/3.txt",
+      "storage": "1",
+      "varName2": "teamthree",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/3.json",
+      "storage": "1",
+      "varName2": "teamthreejson",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/4.txt",
+      "storage": "1",
+      "varName2": "teamfour",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/4.json",
+      "storage": "1",
+      "varName2": "teamfourjson",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/5.txt",
+      "storage": "1",
+      "varName2": "teamfive",
+      "name": "Read File"
+    },
+    {
+      "filename": "./staff/5.json",
+      "storage": "1",
+      "varName2": "teamfivejson",
+      "name": "Read File"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "teamonejson",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name1",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "teamtwojson",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name2",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "teamthreejson",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name3",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "teamfourjson",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name4",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "teamfivejson",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "name5",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#36393F",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "${tempVars(\"name1\")}",
+      "message": "${tempVars(\"teamone\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "${tempVars(\"name2\")}",
+      "message": "${tempVars(\"teamtwo\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "${tempVars(\"name3\")}",
+      "message": "${tempVars(\"teamthree\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "${tempVars(\"name4\")}",
+      "message": "${tempVars(\"teamfour\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "${tempVars(\"name5\")}",
+      "message": "${tempVars(\"teamfive\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
