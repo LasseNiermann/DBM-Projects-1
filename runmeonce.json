@@ -1,0 +1,88 @@
+{
+  "name": "runmeonce",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zgLsn",
+  "actions": [
+    {
+      "input": "${member}",
+      "format": ".txt",
+      "filename": "1",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"Edit Me\"\n}",
+      "format": ".json",
+      "filename": "1",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "${member}",
+      "format": ".txt",
+      "filename": "2",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"Edit Me\"\n}",
+      "format": ".json",
+      "filename": "2",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "${member}",
+      "format": ".txt",
+      "filename": "3",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"Edit Me\"\n}",
+      "format": ".json",
+      "filename": "3",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "${member}",
+      "format": ".txt",
+      "filename": "4",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"Edit Me\"\n}",
+      "format": ".json",
+      "filename": "4",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "${member}",
+      "format": ".txt",
+      "filename": "5",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"Edit Me\"\n}",
+      "format": ".json",
+      "filename": "5",
+      "filepath": "./staff/",
+      "filetask": "1",
+      "name": "File Control"
+    }
+  ]
+}
