@@ -1,10 +1,7 @@
-# Discord Bot Maker | Projects
+# Custom Staff Team
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
-
-## Raw Data Projects
-
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
-
-[Other](https://discord.gg/T7843N) 
+With this system, you can set 5 staff positions (custom) and add/remove members. You can load up the team with the [p]team command.
+Features:
+- Set every teams name to whatever
+- Add a member to the team list
+- Remove a member from the team list
