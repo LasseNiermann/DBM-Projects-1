@@ -1,0 +1,220 @@
+{
+  "name": "createtoken",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "IkUHZ",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: You need to be an administrator. [${member}]",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "type",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"role\"",
+      "iftrue": "2",
+      "iftrueVal": "11",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"other\"",
+      "iftrue": "2",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"101reserved101\"",
+      "iftrue": "2",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: Invalid type. [${member}]\nThe valid types are: `role`, `other`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "uses",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "rolename",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"rolename\")}",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "condition": "0",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: Use the format.\n`${this.getDBM().Files.data.settings.tag}createtoken role [uses] [role name]`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "role",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: This role does not exist. [${member}]",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "input": "A0",
+      "wordLength": "16",
+      "storage": "1",
+      "varName": "code",
+      "name": "Randomize Letters"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "1",
+      "storage": "1",
+      "varName2": "role_id",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "2",
+      "storage": "1",
+      "varName2": "role_name",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "3",
+      "storage": "1",
+      "varName2": "role_colour",
+      "name": "Store Role Info"
+    },
+    {
+      "input": "",
+      "format": ".json",
+      "filename": "${tempVars(\"code\")}",
+      "filepath": "./resources/keys/roles/",
+      "filetask": "0",
+      "name": "File Control"
+    },
+    {
+      "input": "{\n\"name\": \"${tempVars(\"role_name\")}\",\n\"id\": \"${tempVars(\"role_id\")}\",\n\"color\": \"${tempVars(\"role_colour\")}\",\n\"uses\": \"${tempVars(\"uses\")}\"\n}",
+      "format": ".json",
+      "filename": "${tempVars(\"code\")}",
+      "filepath": "./resources/keys/roles/",
+      "filetask": "1",
+      "name": "File Control"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: Saved the key. Check your dms!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Code: ${tempVars(\"code\")}\nTotal Uses: ${tempVars(\"uses\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"code\")}",
+      "changeType": "0",
+      "value": "tempVars(\"uses\")",
+      "name": "Control Server Data"
+    }
+  ]
+}
