@@ -1,10 +1,7 @@
-# Discord Bot Maker | Projects
+# Redeem System
+This is a system that currently allows you to make tokens with () uses for () role.
+When the token has been submitted () times it will not allow the user to redeem it.
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
+I will be working on this system to advance it soon.
 
-## Raw Data Projects
-
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
-
-[Other](https://discord.gg/T7843N) 
+I will update the readme soon...
