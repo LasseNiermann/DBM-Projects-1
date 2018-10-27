@@ -1,0 +1,238 @@
+{
+  "name": "redeem",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "besjx",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "type",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"role\"",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"you_can_edit_me\"",
+      "iftrue": "2",
+      "iftrueVal": "11",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "type",
+      "comparison": "1",
+      "value": "\"you_can_edit_me\"",
+      "iftrue": "2",
+      "iftrueVal": "11",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: Invalid type. [${member}]\nThe valid types are: `role`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "key",
+      "name": "Store Command Params"
+    },
+    {
+      "filename": "./resources/keys/roles/${tempVars(\"key\")}.json",
+      "storage": "1",
+      "varName2": "file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "file",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: Code doesn't exist (anymore).",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.uses",
+      "storage": "1",
+      "varName": "uses",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"key\")}",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: This code has been used ${tempVars(\"uses\")} times and is no longer valid.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.name",
+      "storage": "1",
+      "varName": "rname",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.id",
+      "storage": "1",
+      "varName": "rid",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "file",
+      "path": "$.color",
+      "storage": "1",
+      "varName": "rcolor",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"rname\")}",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "role",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check If Member has Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":gear: You already have this role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "role",
+      "name": "Add Member Role"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"key\")}",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "keyamount",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"key\")}",
+      "changeType": "0",
+      "value": "tempVars(\"keyamount\") - 1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"key\")}",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "keyamount2",
+      "name": "Store Server Data"
+    },
+    {
+      "title": "${tempVars(\"keyamount2\")} uses left.",
+      "author": "${tempVars(\"rname\")} redeemed.",
+      "color": "${tempVars(\"rcolor\")}",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${msg.author.avatarURL}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
