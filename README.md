@@ -1,10 +1,18 @@
-# Discord Bot Maker | Projects
+# Level System NO SQL.
 
-This is where I keep my larger projects. You can find all my other projects [here](https://discord.gg/T7843N)
 
-## Raw Data Projects
+This is a level system with a leaderboard that uses NO SQL.
+It uses [this EDITED version of a mod](https://cdn.discordapp.com/attachments/503191988821164032/507566692512169994/member_data_list_MOD.js)
 
-* [Logging System](https://github.com/DogV2/DBM-Projects/tree/Log-System) - This is my advanced logging system that logs everything which allows efficient moderation work in your server.
-* [Advanced Ticket System](https://github.com/DogV2/DBM-Projects/tree/Ticket-System) - This is an advanced ticket system with about a dozen commands that will help you use support in your server.
+You can set custom roles for each milestone (5, 10, 15, 20, 30, 40 and 50) with the setrole cmd.
+If no role is set, it wont give the role when reaching it.
 
-[Other](https://discord.gg/T7843N) 
+XP needed per level is `current-level * 36`
+Example: `8 * 36` = 288 xp
+
+The leaderboard itself displays the top 10 users.
+**ALL FILES ARE COMMANDS.**
+
+[Example of Leaderboard Command](https://i.need.dbm-support.site/ojcu.png)
+[Example of Level Command](https://i.need.dbm-support.site/kgjb.png)
+[Example of setrole command](https://i.need.dbm-support.site/6nxe.png)
