@@ -1,35 +1,17 @@
-
 {
-  "name": "level",
+  "name": "Gaining_XP",
   "permissions": "NONE",
   "restriction": "1",
-  "_id": "JICrj",
+  "_id": "psniB",
   "actions": [
     {
       "member": "1",
       "varName": "",
-      "info": "7",
+      "dataName": "level",
+      "defaultVal": "1",
       "storage": "1",
-      "varName2": "tag1",
-      "name": "Store Member Things"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "16",
-      "storage": "1",
-      "varName2": "url",
-      "name": "Store Member Info"
-    },
-    {
-      "condition": "1",
-      "comparison": "0",
-      "value": "1",
-      "iftrue": "2",
-      "iftrueVal": "12",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Check Parameters"
+      "varName2": "level2",
+      "name": "Store Member Data"
     },
     {
       "member": "1",
@@ -52,6 +34,74 @@
     {
       "member": "1",
       "varName": "",
+      "dataName": "cooldown",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "isoncooldown",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "xpnumber",
+      "min": "4",
+      "max": "13",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "changeType": "1",
+      "value": "+tempVars(\"xpnumber\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "comparison": "1",
+      "value": "tempVars(\"xpneeded2\")",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "comparison": "4",
+      "value": "tempVars(\"xpneeded2\")",
+      "iftrue": "0",
+      "iftrueVal": "1",
+      "iffalse": "2",
+      "iffalseVal": "45",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
       "dataName": "level",
       "defaultVal": "1",
       "storage": "1",
@@ -59,137 +109,341 @@
       "name": "Store Member Data"
     },
     {
-      "title": "",
-      "author": "${tempVars(\"tag1\")}",
-      "color": "#36393F",
-      "timestamp": "true",
-      "url": "",
-      "authorIcon": "${tempVars(\"url\")}",
-      "imageUrl": "",
-      "thumbUrl": "",
-      "storage": "1",
-      "varName": "embed",
-      "name": "Create Embed Message"
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
     },
     {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "**Level**",
-      "message": "${tempVars(\"level2\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
+      "member": "1",
+      "varName": "",
+      "dataName": "xpneeded",
+      "changeType": "0",
+      "value": "tempVars(\"level2\") * 36",
+      "name": "Control Member Data"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl5",
+      "defaultVal": "0",
       "storage": "1",
-      "varName": "embed",
-      "fieldName": "**XP**",
-      "message": "**${tempVars(\"xp2\")}**/${tempVars(\"xpneeded2\")} XP ",
-      "inline": "0",
-      "name": "Add Embed Field"
+      "varName2": "lvl5rol",
+      "name": "Store Server Data"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl10",
+      "defaultVal": "0",
       "storage": "1",
-      "varName": "embed",
+      "varName2": "lvl10rol",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl15",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl15rol",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl20",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl20rol",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl30",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl30rol",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl40",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl40rol",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "lvl50",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl50rol",
+      "name": "Store Server Data"
+    },
+    {
       "channel": "0",
+      "varName": "",
+      "message": ":tada: ${member} has leveled up to level ${tempVars(\"level2\")}",
+      "storage": "0",
       "varName2": "",
-      "storage3": "0",
-      "varName3": "",
-      "name": "Send Embed Message"
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl5rol\")}",
+      "storage": "1",
+      "varName": "lvl5role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl5role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "10",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl10rol\")}",
+      "storage": "1",
+      "varName": "lvl10role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl10role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "15",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl15rol\")}",
+      "storage": "1",
+      "varName": "lvl15role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl15role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "20",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl20rol\")}",
+      "storage": "1",
+      "varName": "lvl20role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl20role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "30",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl30rol\")}",
+      "storage": "1",
+      "varName": "lvl30role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl30role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "40",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl40rol\")}",
+      "storage": "1",
+      "varName": "lvl40role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl40role",
+      "name": "Add Member Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "comparison": "1",
+      "value": "50",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"lvl50rol\")}",
+      "storage": "1",
+      "varName": "lvl5role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "lvl50role",
+      "name": "Add Member Role"
     },
     {
       "name": "End Action Sequence"
     },
     {
-      "member": "0",
-      "varName": "",
-      "info": "7",
-      "storage": "1",
-      "varName2": "tag",
-      "name": "Store Member Things"
-    },
-    {
-      "member": "0",
-      "varName": "",
-      "info": "16",
-      "storage": "1",
-      "varName2": "url",
-      "name": "Store Member Info"
-    },
-    {
-      "member": "0",
-      "varName": "",
-      "dataName": "xp",
-      "defaultVal": "0",
-      "storage": "1",
-      "varName2": "xp2",
-      "name": "Store Member Data"
-    },
-    {
-      "member": "0",
-      "varName": "",
-      "dataName": "xpneeded",
-      "defaultVal": "36",
-      "storage": "1",
-      "varName2": "xpneeded2",
-      "name": "Store Member Data"
-    },
-    {
-      "member": "0",
+      "member": "1",
       "varName": "",
       "dataName": "level",
-      "defaultVal": "1",
-      "storage": "1",
-      "varName2": "level2",
-      "name": "Store Member Data"
-    },
-    {
-      "title": "",
-      "author": "${tempVars(\"tag\")}",
-      "color": "#36393F",
-      "timestamp": "true",
-      "url": "",
-      "authorIcon": "${tempVars(\"url\")}",
-      "imageUrl": "",
-      "thumbUrl": "",
-      "storage": "1",
-      "varName": "embed",
-      "name": "Create Embed Message"
+      "comparison": "3",
+      "value": "8",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Member Data"
     },
     {
       "storage": "1",
-      "varName": "embed",
-      "fieldName": "**Level**",
-      "message": "${tempVars(\"level2\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
+      "varName": "wait",
+      "min": "4",
+      "max": "10",
+      "name": "Generate Random Number"
     },
     {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "**XP**",
-      "message": "**${tempVars(\"xp2\")}**/${tempVars(\"xpneeded2\")} XP ",
-      "inline": "0",
-      "name": "Add Embed Field"
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
     },
     {
-      "storage": "1",
-      "varName": "embed",
-      "message": "Requested by ${tempVars(\"tag1\")}",
-      "footerIcon": "",
-      "name": "Set Embed Footer"
+      "time": "${tempVars(\"wait\")}",
+      "measurement": "1",
+      "name": "Wait"
     },
     {
-      "storage": "1",
-      "varName": "embed",
-      "channel": "0",
-      "varName2": "",
-      "storage3": "0",
-      "varName3": "",
-      "name": "Send Embed Message"
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "time": "${tempVars(\"level2\")} * 1.44",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
     }
   ],
-  "comType": "0",
-  "_aliases": [
-    "rank"
-  ]
+  "comType": "3"
 }
