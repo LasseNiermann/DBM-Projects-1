@@ -1,0 +1,53 @@
+{
+  "name": "leaderboard",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "TDSfB",
+  "actions": [
+    {
+      "sort": "1",
+      "start": "username",
+      "middle": "- Level",
+      "end": "result",
+      "getresults": "10",
+      "dataName": "level",
+      "varName2": "result",
+      "storage": "1",
+      "name": "Store Member Data List"
+    },
+    {
+      "title": "",
+      "author": "${msg.author.tag}",
+      "color": "#36393F",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${msg.author.avatarURL}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Level Leaderboard",
+      "message": "${tempVars(\"result\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": [
+    "lb"
+  ],
+  "comType": "0"
+}
