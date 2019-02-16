@@ -12,12 +12,12 @@
       "name": "Find Channel"
     },
     {
-      "channel": "3",
-      "varName": "ticketLogsChannel",
-      "info": "3",
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"ticketLogsChannel\").parent;",
       "storage": "1",
-      "varName2": "ticketLogsCategory",
-      "name": "Store Channel Info Things"
+      "varName": "ticketLogsCategory",
+      "name": "Run Script"
     },
     {
       "channel": "3",
@@ -51,10 +51,10 @@
     {
       "member": "1",
       "varName": "",
-      "info": "7",
+      "info": "22",
       "storage": "1",
       "varName2": "tag",
-      "name": "Store Member Things"
+      "name": "Store Member Info"
     },
     {
       "member": "1",
